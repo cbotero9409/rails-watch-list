@@ -1,0 +1,8 @@
+<h2>My Lists</h2>
+<div class="cards">
+  <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://observer.com/wp-content/uploads/sites/2/2021/05/summer-movies-2021-new-e1620919489437.jpg?quality=80)">
+      <%= link_to list.name.capitalize, list_path(list) %>
+    </div>
+  <% end %>
+</div>
