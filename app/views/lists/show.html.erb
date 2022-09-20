@@ -1,5 +1,7 @@
 <h1 class="mb-3"><%= @list.name.capitalize %></h1>
-<%= link_to '+ Add movie', new_list_bookmark_path(@list), class: 'btn btn-primary mb-4' %>
+<% img = @list.photo.attached? ? @list.photo.key : "defaultmovielist" %>
+<%= cl_image_tag img, width: 900, height: 200, crop: :fill %><br>
+<%= link_to '+ Add movie', new_list_bookmark_path(@list), class: 'btn btn-primary my-4' %>
 <div class="cards">
   <% @list.bookmarks.each do |bookmark| %>
     <div class="card-trip">
